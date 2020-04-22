@@ -2,14 +2,14 @@
     background-image: rgb(72, 115, 251);
     background-color: rgb(72, 115, 251);
     background-repeat: repeat-x;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
     padding: 8px;
     border: 1px solid transparent;
     border-radius: 4px;
     cursor: pointer;
     text-shadow: 0 1px 0 rgb(72, 115, 251);
     color: #333;
-    font-size: 15px;    
+    font-size: 15px;
     font-weight: bold;
     line-height: 12px;
 }
@@ -22,7 +22,7 @@
 }
 
 .iconButton[disabled] {
-    opacity: .65;
+    opacity: 0.65;
     box-shadow: none;
     background-color: #e0e0e0;
     background-image: none;
@@ -31,4 +31,34 @@
 .iconButton[disabled]:hover {
     border-color: #ccc;
     cursor: default;
+}
+
+.magnifier {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+}
+
+.magnifier-image {
+    cursor: none;
+}
+
+.magnifying-glass {
+    position: absolute;
+    z-index: 1;
+    background: #e5e5e5 no-repeat;
+    border: solid #ebebeb;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.magnifying-glass.circle {
+    border-radius: 50%;
+}
+
+.magnifying-glass.visible {
+    opacity: 1;
+    
 }

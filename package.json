@@ -1,6 +1,6 @@
 {
-  "name": "react-responsive-pinch-zoom-pan-withoutwheel",
-  "version": "0.1.2",
+  "name": "react-responsive-pinch-zoom-pan-magnifier",
+  "version": "0.0.1",
   "description": "Enables zooming and panning an image, both mobile and desktop.",
   "main": "dist/PinchZoomPan.js",
   "scripts": {
@@ -45,20 +45,21 @@
     "style-loader": "0.23.0",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "3.1.14"
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "3.7.1"
   },
   "author": "Avneesh",
-  "homepage": "https://github.com/avneesh30/react-responsive-pinch-zoom-pan-withoutwheel.git",
+  "homepage": "https://github.com/avneesh30/react-responsive-pinch-zoom-pan-magnifier.git",
   "repository": {
     "type": "git",
-    "url": "git@github.com:avneesh30/react-responsive-pinch-zoom-pan-withoutwheel.git"
+    "url": "git@github.com:avneesh30/react-responsive-pinch-zoom-pan-magnifier.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "react-scripts": "^3.4.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "reselect": "^4.0.0",
     "warning": "^4.0.2"
   },

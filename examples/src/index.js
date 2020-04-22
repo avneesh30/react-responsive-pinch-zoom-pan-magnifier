@@ -7,6 +7,7 @@ const isDevelopment = () => process.env.NODE_ENV !== 'production';
 const SizedContainerView = ({menu, width, height}) => {
     const imageWidth = width * 2;
     const imageHeight = height * 2;
+   
     return (
         <div>
             <nav>{menu}</nav>
@@ -37,13 +38,10 @@ const flexContentStyle = {
     margin: 'auto',
 }
 const FlexContainerView = ({menu}) => (
-    <div style={{height: '100vh', display: 'flex', flexDirection: 'column'}}>
+    <div style={{height: '100vh', display: 'flex', flexDirection: 'column'}}>        
         <nav style={{flex: 'none'}}>{menu}</nav>
         <div style={{flex: 'none', textAlign: 'center'}}><span style={flexContentStyle}>The image fills 100% of the flex item in which it is contained</span></div>
-        <main style={{flex: 'auto', overflow: 'hidden', display: 'flex'}}>
-            <div style={{flex: 'none', alignSelf: 'center'}}>
-                <span style={flexContentStyle}>Sidebar</span>
-            </div>
+        <main style={{flex: 'auto', overflow: 'hidden', display: 'flex'}}>            
             <div style={{flex: 'auto', overflow: 'hidden', position: 'relative'}}>
                 <div style={{position: 'absolute', height: '100%', width: '100%'}}>
                     <PinchZoomPan debug={isDevelopment()} position='center' zoomButtons={false}>
@@ -67,7 +65,7 @@ const Menu = ({viewId, onViewChange}) => {
 
     return (
         <React.Fragment>
-            <span style={{fontSize: 20, fontWeight: 'bold', padding: 10}}>Demo</span>
+            <span style={{fontSize: 20, fontWeight: 'bold', padding: 10}}>Demo</span>           
             <a href='#' onClick={() => onViewChange(0)} style={getLinkStyle(0)}>Small</a>
             <a href='#' onClick={() => onViewChange(1)} style={getLinkStyle(1)}>Medium</a>
             <a href='#' onClick={() => onViewChange(3)} style={getLinkStyle(3)}>Centered</a>
